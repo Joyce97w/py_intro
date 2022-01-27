@@ -12,16 +12,23 @@ while i <=5:
 
     M=input("數字:")
     M=int(M)
-    if i==5:
-        print("你輸了")
-    elif M==N:
+    
+    if M==N:
         print("猜對了")
         break
     elif M>N:
-        print("數字太大")
+        if i==5:
+            print("你輸了")
+            break
+        if i<5:
+            print("數字太大")
         i=i+1
     elif M<N:
-        print("數字太小")
+        if i==5:
+            print("你輸了")
+            break
+        if i<5:
+            print("數字太大")
         i=i+1
     
    
